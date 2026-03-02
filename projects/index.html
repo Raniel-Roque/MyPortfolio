@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects • Raniel Christian B. Roque</title>
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var shouldDark = saved ? saved === 'dark' : prefersDark;
+          if (shouldDark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="../assets/css/tailwind.min.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body class="min-h-screen">
+    <header class="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="../index.html" class="font-semibold tracking-tight">Raniel Christian B. Roque</a>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" type="button" class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white p-2 text-gray-900 hover:bg-gray-50" aria-label="Toggle dark mode">
+            <span class="sr-only">Toggle dark mode</span>
+            <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="M4.93 4.93l1.41 1.41" />
+              <path d="M17.66 17.66l1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="M4.93 19.07l1.41-1.41" />
+              <path d="M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+            </svg>
+          </button>
+          <a href="../index.html#contact" class="rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white hover:bg-gray-800">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <p class="text-sm text-gray-600"><a class="hover:underline" href="../index.html">Home</a> / Projects</p>
+            <h1 class="mt-2 text-3xl font-bold tracking-tight">Project Demos</h1>
+            <p class="mt-3 max-w-3xl text-gray-600">
+              These are static demo pages (no backend) to showcase how each system looks and works.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-4 lg:grid-cols-3">
+          <a class="block rounded-xl border border-gray-200 bg-white p-5 hover:bg-gray-50" href="whispr.html">
+            <div class="text-sm font-semibold">Whispr</div>
+            <div class="mt-1 text-sm text-gray-600">October 2024 — November 2024</div>
+            <div class="mt-3 text-sm text-gray-600">Messaging app demo (Flutter + Firebase).</div>
+          </a>
+
+          <a class="block rounded-xl border border-gray-200 bg-white p-5 hover:bg-gray-50" href="doctask.html">
+            <div class="text-sm font-semibold">DocTask</div>
+            <div class="mt-1 text-sm text-gray-600">December 2024 — November 2025</div>
+            <div class="mt-3 text-sm text-gray-600">Capstone PWA for documentation + task tracking.</div>
+          </a>
+
+          <a class="block rounded-xl border border-gray-200 bg-white p-5 hover:bg-gray-50" href="ddss.html">
+            <div class="text-sm font-semibold">Digital Disinfection Slip System (DDSS)</div>
+            <div class="mt-1 text-sm text-gray-600">December 2025 — January 2026</div>
+            <div class="mt-3 text-sm text-gray-600">Digital slips, approvals, logs, and reports.</div>
+          </a>
+
+          <a class="block rounded-xl border border-gray-200 bg-white p-5 hover:bg-gray-50" href="intellihatch.html">
+            <div class="text-sm font-semibold">IntelliHatch</div>
+            <div class="mt-1 text-sm text-gray-600">January 2026 — February 2026</div>
+            <div class="mt-3 text-sm text-gray-600">Operations dashboard + admin tools demo.</div>
+          </a>
+
+          <a class="block rounded-xl border border-gray-200 bg-white p-5 hover:bg-gray-50" href="intellifire.html">
+            <div class="text-sm font-semibold">IntelliFire</div>
+            <div class="mt-1 text-sm text-gray-600">February 2026</div>
+            <div class="mt-3 text-sm text-gray-600">Fire safety workflows and incident tracking demo.</div>
+          </a>
+
+          <a class="block rounded-xl border border-gray-200 bg-white p-5 hover:bg-gray-50" href="fvp.html">
+            <div class="text-sm font-semibold">Farm Visit Portal (FVP)</div>
+            <div class="mt-1 text-sm text-gray-600">February 2026</div>
+            <div class="mt-3 text-sm text-gray-600">Permit scheduling and admin workflow demo.</div>
+          </a>
+
+          <a class="block rounded-xl border border-gray-200 bg-white p-5 hover:bg-gray-50" href="last-slice.html">
+            <div class="text-sm font-semibold">Last Slice</div>
+            <div class="mt-1 text-sm text-gray-600">March — April 2025</div>
+            <div class="mt-3 text-sm text-gray-600">Unity game project screenshots and walkthrough.</div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

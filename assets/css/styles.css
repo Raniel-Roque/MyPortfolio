@@ -1,0 +1,51 @@
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg: #f9fafb;
+  --text: #111827;
+  --card: #ffffff;
+  --muted: #4b5563;
+  --muted-2: #6b7280;
+  --border: #e5e7eb;
+  --soft: #f3f4f6;
+  --header: rgba(255, 255, 255, 0.8);
+}
+
+html.dark {
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --card: #0f172a;
+  --muted: #cbd5e1;
+  --muted-2: #94a3b8;
+  --border: #1f2937;
+  --soft: #111827;
+  --header: rgba(15, 23, 42, 0.75);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.bg-white { background-color: var(--card) !important; }
+.bg-gray-50 { background-color: var(--soft) !important; }
+.bg-gray-100 { background-color: rgba(148, 163, 184, 0.14) !important; }
+.text-gray-900 { color: var(--text) !important; }
+.text-gray-700, .text-gray-600 { color: var(--muted) !important; }
+.text-gray-500 { color: var(--muted-2) !important; }
+.border-gray-200, .border-gray-300 { border-color: var(--border) !important; }
+.bg-white\/80 { background-color: var(--header) !important; }
+
+html.dark .bg-gray-900 { background-color: #e5e7eb !important; }
+html.dark .text-white { color: #0b1220 !important; }
+html.dark .hover\:bg-gray-800:hover { background-color: #cbd5e1 !important; }
+
+.section-divider {
+  border-top: 1px solid var(--border);
+}
+
+.chip {
+  background: rgba(148, 163, 184, 0.14);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}

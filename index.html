@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio</title>
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var shouldDark = saved ? saved === 'dark' : prefersDark;
+          if (shouldDark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/tailwind.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="min-h-screen">
+    <main id="top" class="mx-auto max-w-6xl px-4 py-10">
+      <div class="grid gap-10 lg:grid-cols-12">
+        <aside class="lg:col-span-4">
+          <div class="sticky top-6 rounded-2xl border border-gray-200 bg-white p-6">
+            <div class="flex flex-col items-center text-center">
+              <img class="h-28 w-28 rounded-2xl object-cover" src="assets/images/MyPhoto.png" alt="Profile photo" loading="lazy" />
+              <div class="mt-4 text-2xl font-bold tracking-tight">Raniel Christian B. Roque</div>
+              <div class="mt-1 text-sm text-gray-600">IT / Software Developer</div>
+              <p class="mt-4 max-w-xs text-sm text-gray-600">
+                Building web and other various applications.
+              </p>
+            </div>
+
+            <div class="mt-6 space-y-3 text-sm">
+              <a class="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2 hover:bg-gray-100" href="mailto:raniel.christian.roque@gmail.com">
+                <span class="text-gray-600">Email</span>
+                <span class="font-medium text-gray-900">raniel.christian.roque@gmail.com</span>
+              </a>
+              <a class="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2 hover:bg-gray-100" href="tel:+639983790133">
+                <span class="text-gray-600">Mobile</span>
+                <span class="font-medium text-gray-900">+63 998 379 0133</span>
+              </a>
+              <a class="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2 hover:bg-gray-100" href="https://github.com/Raniel-Roque">
+                <span class="text-gray-600">GitHub</span>
+                <span class="font-medium text-gray-900">@Raniel-Roque</span>
+              </a>
+              <div class="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2">
+                <span class="text-gray-600">Location</span>
+                <span class="font-medium text-gray-900">Tarlac, PH</span>
+              </div>
+            </div>
+
+            <div class="mt-6 grid grid-cols-2 gap-3">
+              <a href="#projects" class="inline-flex items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800">Projects</a>
+              <a href="#contact" class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50">Contact</a>
+            </div>
+
+            <div class="mt-4 flex items-center justify-between">
+              <a class="text-sm font-semibold text-gray-900 hover:underline" href="CV_RESUME.docx" download>Download Resume</a>
+              <button id="themeToggle" type="button" class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white p-2 text-gray-900 hover:bg-gray-50" aria-label="Toggle dark mode">
+                <span class="sr-only">Toggle dark mode</span>
+                <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2" />
+                  <path d="M12 20v2" />
+                  <path d="M4.93 4.93l1.41 1.41" />
+                  <path d="M17.66 17.66l1.41 1.41" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                  <path d="M4.93 19.07l1.41-1.41" />
+                  <path d="M17.66 6.34l1.41-1.41" />
+                </svg>
+                <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <div class="lg:col-span-8">
+          <section>
+            <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">Building reliable web apps and practical IT solutions.</h1>
+            <p class="mt-3 text-sm text-gray-600">
+              Interested in full-stack development, networking, and cybersecurity.
+            </p>
+          </section>
+
+          <section id="objective" class="mt-10 section-divider pt-10">
+            <h2 class="text-lg font-bold tracking-tight">Objective</h2>
+            <p class="mt-2 text-sm text-gray-600">
+              To obtain an opportunity where I can gain practical work experience, apply my academic learning, and develop professional skills—contributing quality work and full cooperation to support the company’s goals.
+            </p>
+          </section>
+
+          <section id="skills" class="mt-10 section-divider pt-10">
+            <div class="flex items-end justify-between gap-6">
+              <div>
+                <h2 class="text-lg font-bold tracking-tight">Core Skills</h2>
+                <p class="mt-2 text-sm text-gray-600">A quick overview of my most-used tools.</p>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-6 sm:grid-cols-2">
+              <div>
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-gray-600"><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M8 20h8" /><path d="M12 16v4" /></svg>
+                  Frontend
+                </div>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">React</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Next.js</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Tailwind</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Alpine.js</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Livewire</span>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-gray-600"><rect x="3" y="4" width="18" height="6" rx="2" /><rect x="3" y="14" width="18" height="6" rx="2" /><path d="M7 7h.01" /><path d="M7 17h.01" /></svg>
+                  Backend / Database 
+                </div>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Laravel</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Node.js</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Firebase</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Convex</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">MySQL</span>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-gray-600"><path d="M16 18l6-6-6-6" /><path d="M8 6l-6 6 6 6" /></svg>
+                  Languages
+                </div>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">TypeScript</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">JavaScript</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">C++</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Dart</span>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-gray-600"><path d="M12 2l9 7-9 7-9-7 9-7z" /><path d="M3 9v10l9 3 9-3V9" /></svg>
+                  Tools
+                </div>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Git</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">GitHub</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Figma</span>
+                  <span class="chip inline-flex items-center rounded-full px-3 py-1">Microsoft Office</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="certifications" class="mt-10 section-divider pt-10">
+            <h2 class="text-lg font-bold tracking-tight">Certifications</h2>
+            <p class="mt-2 text-sm text-gray-600">Networking, security, and programming certifications.</p>
+
+            <div class="mt-4 grid gap-3 sm:grid-cols-2">
+              <a class="group rounded-2xl border border-gray-200 bg-white p-3 hover:bg-gray-50" href="assets/images/certificates/CCNA_ Enterprise Networking, Security, and Automation.png" target="_blank" rel="noreferrer">
+                <img class="h-32 w-full rounded-xl object-cover" src="assets/images/certificates/CCNA_ Enterprise Networking, Security, and Automation.png" alt="CCNA: Enterprise Networking, Security, and Automation certificate" loading="lazy" />
+                <div class="mt-3 text-sm font-semibold">CCNA: Enterprise Networking, Security, and Automation</div>
+                <div class="mt-1 text-xs text-gray-600">November 2025</div>
+              </a>
+
+              <a class="group rounded-2xl border border-gray-200 bg-white p-3 hover:bg-gray-50" href="assets/images/certificates/Introduction to Cybersecurity.png" target="_blank" rel="noreferrer">
+                <img class="h-32 w-full rounded-xl object-cover" src="assets/images/certificates/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity certificate" loading="lazy" />
+                <div class="mt-3 text-sm font-semibold">Introduction to Cybersecurity</div>
+                <div class="mt-1 text-xs text-gray-600">March 2025</div>
+              </a>
+
+              <a class="group rounded-2xl border border-gray-200 bg-white p-3 hover:bg-gray-50" href="assets/images/certificates/CCNAv7_ Switching, Routing, and Wireless Essentials.png" target="_blank" rel="noreferrer">
+                <img class="h-32 w-full rounded-xl object-cover" src="assets/images/certificates/CCNAv7_ Switching, Routing, and Wireless Essentials.png" alt="CCNAv7: Switching, Routing, and Wireless Essentials certificate" loading="lazy" />
+                <div class="mt-3 text-sm font-semibold">CCNAv7: Switching, Routing, and Wireless Essentials</div>
+                <div class="mt-1 text-xs text-gray-600">June 2024</div>
+              </a>
+
+              <a class="group rounded-2xl border border-gray-200 bg-white p-3 hover:bg-gray-50" href="assets/images/certificates/CCNAv7_ Introduction to Networks.png" target="_blank" rel="noreferrer">
+                <img class="h-32 w-full rounded-xl object-cover" src="assets/images/certificates/CCNAv7_ Introduction to Networks.png" alt="CCNAv7: Introduction to Networks certificate" loading="lazy" />
+                <div class="mt-3 text-sm font-semibold">CCNAv7: Introduction to Networks</div>
+                <div class="mt-1 text-xs text-gray-600">December 2023</div>
+              </a>
+
+              <a class="group rounded-2xl border border-gray-200 bg-white p-3 hover:bg-gray-50" href="assets/images/certificates/Partner_ PCAP - Programming Essentials in Python.png" target="_blank" rel="noreferrer">
+                <img class="h-32 w-full rounded-xl object-cover" src="assets/images/certificates/Partner_ PCAP - Programming Essentials in Python.png" alt="PCAP: Programming Essentials in Python certificate" loading="lazy" />
+                <div class="mt-3 text-sm font-semibold">PCAP: Programming Essentials in Python</div>
+                <div class="mt-1 text-xs text-gray-600">December 2023</div>
+              </a>
+
+              <a class="group rounded-2xl border border-gray-200 bg-white p-3 hover:bg-gray-50" href="assets/images/certificates/Partner_ JavaScript Essentials 1 (JSE).png" target="_blank" rel="noreferrer">
+                <img class="h-32 w-full rounded-xl object-cover" src="assets/images/certificates/Partner_ JavaScript Essentials 1 (JSE).png" alt="JavaScript Essentials 1 (JSE) certificate" loading="lazy" />
+                <div class="mt-3 text-sm font-semibold">JavaScript Essentials 1 (JSE)</div>
+                <div class="mt-1 text-xs text-gray-600">November 2022</div>
+              </a>
+            </div>
+
+          </section>
+
+          <section id="projects" class="mt-10 section-divider pt-10">
+            <h2 class="text-lg font-bold tracking-tight">Projects</h2>
+            <p class="mt-2 text-sm text-gray-600">Selected personal and company projects.</p>
+
+            <div class="mt-6">
+              <h3 class="text-sm font-semibold text-gray-900">Company Projects</h3>
+              <p class="mt-1 text-xs text-gray-600">Brookside Group of Companies</p>
+              <div class="mt-3 grid gap-4 sm:grid-cols-2">
+                <article class="rounded-2xl border border-gray-200 bg-white p-4">
+                  <img class="h-36 w-full rounded-xl object-cover" src="assets/images/fvp/Dashboard.png" alt="FVP screenshot" loading="lazy" />
+                  <div class="mt-4">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <div class="text-sm font-semibold">Farm Visit Portal (FVP)</div>
+                        <div class="mt-1 text-xs text-gray-600">February 2026</div>
+                      </div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Permit scheduling and admin workflow demo.</p>
+                    <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                      <a class="font-medium text-gray-900 hover:underline" href="projects/fvp.html">Demo</a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="rounded-2xl border border-gray-200 bg-white p-4">
+                  <img class="h-36 w-full rounded-xl object-cover" src="assets/images/intellihatch/Dashboard.png" alt="IntelliHatch screenshot" loading="lazy" />
+                  <div class="mt-4">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <div class="text-sm font-semibold">IntelliHatch</div>
+                        <div class="mt-1 text-xs text-gray-600">Jan 2026 — Feb 2026</div>
+                      </div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Operations/admin dashboard demo with reports.</p>
+                    <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                      <a class="font-medium text-gray-900 hover:underline" href="projects/intellihatch.html">Demo</a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="rounded-2xl border border-gray-200 bg-white p-4">
+                  <img class="h-36 w-full rounded-xl object-cover" src="assets/images/ddss/Landing.png" alt="DDSS screenshot" loading="lazy" />
+                  <div class="mt-4">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <div class="text-sm font-semibold">Digital Disinfection Slip System (DDSS)</div>
+                        <div class="mt-1 text-xs text-gray-600">Dec 2025 — Jan 2026</div>
+                      </div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Requests, approvals, status tracking, printable slips.</p>
+                    <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                      <a class="font-medium text-gray-900 hover:underline" href="projects/ddss.html">Demo</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="text-sm font-semibold text-gray-900">Personal Projects</h3>
+              <div class="mt-3 grid gap-4 sm:grid-cols-2">
+                <article class="rounded-2xl border border-gray-200 bg-white p-4">
+                  <img class="h-36 w-full rounded-xl object-cover" src="assets/images/intellifire/Landing.png" alt="IntelliFire screenshot" loading="lazy" />
+                  <div class="mt-4">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <div class="text-sm font-semibold">IntelliFire</div>
+                        <div class="mt-1 text-xs text-gray-600">February 2026</div>
+                      </div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Fire safety workflows demo: incidents, inspections, actions.</p>
+                    <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                      <a class="font-medium text-gray-900 hover:underline" href="projects/intellifire.html">Demo</a>
+                      <a class="font-medium text-gray-900 hover:underline" href="https://github.com/Raniel-Roque/IntelliFire" target="_blank" rel="noreferrer">Code</a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="rounded-2xl border border-gray-200 bg-white p-4">
+                  <img class="h-36 w-full rounded-xl object-cover" src="assets/images/doctask/Student.png" alt="DocTask screenshot" loading="lazy" />
+                  <div class="mt-4">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <div class="text-sm font-semibold">DocTask</div>
+                        <div class="mt-1 text-xs text-gray-600">Dec 2024 — Nov 2025</div>
+                      </div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Capstone PWA for documentation and task management.</p>
+                    <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                      <a class="font-medium text-gray-900 hover:underline" href="projects/doctask.html">Demo</a>
+                      <a class="font-medium text-gray-900 hover:underline" href="https://github.com/Raniel-Roque/doctask" target="_blank" rel="noreferrer">Code</a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="rounded-2xl border border-gray-200 bg-white p-4">
+                  <img class="h-36 w-full rounded-xl bg-gray-50 object-contain p-6" src="assets/images/whispr/Logo.png" alt="Whispr logo" loading="lazy" />
+                  <div class="mt-4">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <div class="text-sm font-semibold">Whispr</div>
+                        <div class="mt-1 text-xs text-gray-600">Oct 2024 — Nov 2024</div>
+                      </div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">Messaging app demo built with Flutter and Firebase.</p>
+                    <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                      <a class="font-medium text-gray-900 hover:underline" href="projects/whispr.html">Demo</a>
+                      <a class="font-medium text-gray-900 hover:underline" href="https://github.com/Raniel-Roque/messaging_app" target="_blank" rel="noreferrer">Code</a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="rounded-2xl border border-gray-200 bg-white p-4">
+                  <img class="h-36 w-full rounded-xl object-cover" src="assets/images/last-slice/Preview1.png" alt="Last Slice screenshot" loading="lazy" />
+                  <div class="mt-4">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <div class="text-sm font-semibold">Last Slice</div>
+                        <div class="mt-1 text-xs text-gray-600">March — April 2025</div>
+                      </div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-600">A Unity game project (screenshots and walkthrough).</p>
+                    <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                      <a class="font-medium text-gray-900 hover:underline" href="projects/last-slice.html">Screens</a>
+                      <a class="font-medium text-gray-900 hover:underline" href="https://kouhaii.itch.io/last-slice" target="_blank" rel="noreferrer">Play</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section id="experience" class="mt-10 section-divider pt-10">
+            <h2 class="text-lg font-bold tracking-tight">Education</h2>
+            <p class="mt-2 text-sm text-gray-600">Academic background.</p>
+
+            <div class="mt-6 space-y-4">
+              <div class="rounded-2xl border border-gray-200 bg-white p-5">
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <div class="font-semibold">Bachelor of Science in Information Technology</div>
+                  <div class="text-sm text-gray-600">Dominican College of Tarlac, Inc. • 2022 — 2026</div>
+                </div>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-600">
+                  <li>Dean’s List Honors from 1st to 3rd year of college.</li>
+                  <li>Capas, Tarlac (Mc Arthur Highway, Poblacion).</li>
+                </ul>
+              </div>
+
+              <div class="rounded-2xl border border-gray-200 bg-white p-5">
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <div class="font-semibold">Accountancy, Business, and Management (ABM)</div>
+                  <div class="text-sm text-gray-600">Sto. Niño Academy • 2020 — 2022</div>
+                </div>
+                <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-600">
+                  <li>Achieved High Honors in secondary education.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <footer class="mt-10 section-divider pt-8">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p class="text-sm text-gray-600">© <span id="year"></span> Raniel Christian B. Roque. All rights reserved.</p>
+              <div class="flex gap-4 text-sm text-gray-600">
+                <a class="hover:text-gray-900" href="#top">Back to top</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

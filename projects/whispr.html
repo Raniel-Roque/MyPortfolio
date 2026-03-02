@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whispr • Demo</title>
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var shouldDark = saved ? saved === 'dark' : prefersDark;
+          if (shouldDark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="../assets/css/tailwind.min.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body class="min-h-screen">
+    <header class="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a href="index.html" class="font-semibold tracking-tight">Projects</a>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" type="button" class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white p-2 text-gray-900 hover:bg-gray-50" aria-label="Toggle dark mode">
+            <span class="sr-only">Toggle dark mode</span>
+            <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="M4.93 4.93l1.41 1.41" />
+              <path d="M17.66 17.66l1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="M4.93 19.07l1.41-1.41" />
+              <path d="M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+            </svg>
+          </button>
+          <a href="../index.html" class="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50">Home</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-6xl px-4 py-10">
+        <p class="text-sm text-gray-600"><a class="hover:underline" href="index.html">Projects</a> / Whispr</p>
+        <div class="mt-2 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <h1 class="text-3xl font-bold tracking-tight">Whispr</h1>
+            <p class="mt-2 text-gray-600">Messaging app demo • October 2024 — November 2024</p>
+          </div>
+          <a class="rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800" href="https://github.com/Raniel-Roque/messaging_app">View Code</a>
+        </div>
+
+        <div class="mt-8 grid gap-4 lg:grid-cols-12">
+          <div class="lg:col-span-7">
+            <div class="rounded-2xl border border-gray-200 bg-white p-5">
+              <div class="text-sm font-semibold">Overview</div>
+              <p class="mt-2 text-sm text-gray-600">
+                Whispr is a simple messaging app demo showing authentication, contacts, and real-time chat UI.
+                This is a static walkthrough of the screens and flow.
+              </p>
+
+              <div class="mt-5 text-sm font-semibold">Main Flow</div>
+              <ol class="mt-2 list-decimal space-y-2 pl-5 text-sm text-gray-600">
+                <li>Login / Register</li>
+                <li>Search or select a contact</li>
+                <li>Send messages and view conversation history</li>
+                <li>Profile and settings</li>
+              </ol>
+            </div>
+
+            <div class="mt-4 rounded-2xl border border-gray-200 bg-white p-5">
+              <div class="text-sm font-semibold">Demo Screens (Static)</div>
+              <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                  <div class="text-xs font-semibold">Login</div>
+                  <img class="mt-2 h-36 w-full rounded-md object-cover" src="../assets/images/whispr/Login.jpg" alt="Whispr login" loading="lazy" />
+                </div>
+                <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                  <div class="text-xs font-semibold">Contacts</div>
+                  <img class="mt-2 h-36 w-full rounded-md object-cover" src="../assets/images/whispr/Message.jpg" alt="Whispr contacts" loading="lazy" />
+                </div>
+                <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                  <div class="text-xs font-semibold">Chat</div>
+                  <img class="mt-2 h-36 w-full rounded-md object-cover" src="../assets/images/whispr/Message_Dark.jpg" alt="Whispr chat" loading="lazy" />
+                </div>
+                <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                  <div class="text-xs font-semibold">Profile</div>
+                  <img class="mt-2 h-36 w-full rounded-md object-cover" src="../assets/images/whispr/Logo.png" alt="Whispr profile" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="lg:col-span-5">
+            <div class="rounded-2xl border border-gray-200 bg-white p-5">
+              <div class="text-sm font-semibold">Tech Stack</div>
+              <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                <span class="rounded-full bg-gray-100 px-2 py-1">Flutter</span>
+                <span class="rounded-full bg-gray-100 px-2 py-1">Firebase</span>
+                <span class="rounded-full bg-gray-100 px-2 py-1">Android</span>
+              </div>
+
+              <div class="mt-6 text-sm font-semibold">Role</div>
+              <p class="mt-2 text-sm text-gray-600">Developer</p>
+            </div>
+
+            <div class="mt-4 rounded-2xl border border-gray-200 bg-white p-5">
+              <div class="text-sm font-semibold">Links</div>
+              <div class="mt-2 space-y-2 text-sm">
+                <a class="block text-gray-700 hover:underline" href="https://github.com/Raniel-Roque/messaging_app" target="_blank" rel="noreferrer">GitHub Repository</a>
+              </div>
+            </div>
+
+            <div class="mt-4 rounded-2xl border border-gray-200 bg-white p-5">
+              <div class="text-sm font-semibold">Highlights</div>
+              <ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-gray-600">
+                <li>Clean chat UI flow</li>
+                <li>Basic app structure and navigation</li>
+                <li>Firebase integration pattern</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
