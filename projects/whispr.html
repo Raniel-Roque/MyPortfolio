@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whispr • Demo</title>
+    <title>Whispr • Project Overview</title>
     <script>
       (function () {
         try {
@@ -50,7 +50,7 @@
         <div class="mt-2 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <h1 class="text-3xl font-bold tracking-tight">Whispr</h1>
-            <p class="mt-2 text-gray-600">Messaging app demo • October 2024 — November 2024</p>
+            <p class="mt-2 text-gray-600">Messaging app • October 2024 — November 2024</p>
           </div>
           <a class="rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800" href="https://github.com/Raniel-Roque/messaging_app">View Code</a>
         </div>
@@ -60,37 +60,29 @@
             <div class="rounded-2xl border border-gray-200 bg-white p-5">
               <div class="text-sm font-semibold">Overview</div>
               <p class="mt-2 text-sm text-gray-600">
-                Whispr is a simple messaging app demo showing authentication, contacts, and real-time chat UI.
+                Whispr is a simple messaging app showing authentication, contacts, and real-time chat UI.
                 This is a static walkthrough of the screens and flow.
               </p>
-
-              <div class="mt-5 text-sm font-semibold">Main Flow</div>
-              <ol class="mt-2 list-decimal space-y-2 pl-5 text-sm text-gray-600">
-                <li>Login / Register</li>
-                <li>Search or select a contact</li>
-                <li>Send messages and view conversation history</li>
-                <li>Profile and settings</li>
-              </ol>
             </div>
 
             <div class="mt-4 rounded-2xl border border-gray-200 bg-white p-5">
-              <div class="text-sm font-semibold">Demo Screens (Static)</div>
+              <div class="text-sm font-semibold">Photos</div>
               <div class="mt-3 grid gap-3 sm:grid-cols-2">
                 <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
                   <div class="text-xs font-semibold">Login</div>
-                  <img class="mt-2 h-36 w-full rounded-md object-cover" src="../assets/images/whispr/Login.jpg" alt="Whispr login" loading="lazy" />
+                  <a class="js-lightbox" href="../assets/images/whispr/Login.jpg" data-lightbox-caption="Login"><img class="mt-2 h-36 w-full cursor-zoom-in rounded-md object-cover" src="../assets/images/whispr/Login.jpg" alt="Whispr login" loading="lazy" /></a>
                 </div>
                 <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
                   <div class="text-xs font-semibold">Contacts</div>
-                  <img class="mt-2 h-36 w-full rounded-md object-cover" src="../assets/images/whispr/Message.jpg" alt="Whispr contacts" loading="lazy" />
+                  <a class="js-lightbox" href="../assets/images/whispr/Message.jpg" data-lightbox-caption="Contacts"><img class="mt-2 h-36 w-full cursor-zoom-in rounded-md object-cover" src="../assets/images/whispr/Message.jpg" alt="Whispr contacts" loading="lazy" /></a>
                 </div>
                 <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
                   <div class="text-xs font-semibold">Chat</div>
-                  <img class="mt-2 h-36 w-full rounded-md object-cover" src="../assets/images/whispr/Message_Dark.jpg" alt="Whispr chat" loading="lazy" />
+                  <a class="js-lightbox" href="../assets/images/whispr/Message_Dark.jpg" data-lightbox-caption="Chat"><img class="mt-2 h-36 w-full cursor-zoom-in rounded-md object-cover" src="../assets/images/whispr/Message_Dark.jpg" alt="Whispr chat" loading="lazy" /></a>
                 </div>
                 <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
                   <div class="text-xs font-semibold">Profile</div>
-                  <img class="mt-2 h-36 w-full rounded-md object-cover" src="../assets/images/whispr/Logo.png" alt="Whispr profile" loading="lazy" />
+                  <a class="js-lightbox" href="../assets/images/whispr/Logo.png" data-lightbox-caption="Profile"><img class="mt-2 h-36 w-full cursor-zoom-in rounded-md object-cover" src="../assets/images/whispr/Logo.png" alt="Whispr profile" loading="lazy" /></a>
                 </div>
               </div>
             </div>
@@ -128,6 +120,15 @@
         </div>
       </section>
     </main>
+
+    <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="lightbox-backdrop" data-lightbox-close></div>
+      <div class="lightbox-content" role="document">
+        <button type="button" class="lightbox-close" aria-label="Close" data-lightbox-close>×</button>
+        <img id="lightboxImage" class="lightbox-image" alt="" />
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+      </div>
+    </div>
 
     <script src="../assets/js/main.js"></script>
   </body>

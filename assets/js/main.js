@@ -51,3 +51,61 @@ window.handleContactSubmit = function handleContactSubmit(event) {
   const el = document.getElementById('year');
   if (el) el.textContent = new Date().getFullYear();
 })();
+
+(function lightbox() {
+  const modal = document.getElementById('lightboxModal');
+  const img = document.getElementById('lightboxImage');
+  const caption = document.getElementById('lightboxCaption');
+  if (!modal || !img) return;
+
+  let lastActive = null;
+
+  function open(src, alt, text) {
+    if (!src) return;
+    lastActive = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    if (caption) caption.textContent = text || '';
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    img.removeAttribute('src');
+    if (caption) caption.textContent = '';
+    if (lastActive && typeof lastActive.focus === 'function') lastActive.focus();
+    lastActive = null;
+  }
+
+  document.addEventListener('click', function (e) {
+    const a = e.target && e.target.closest ? e.target.closest('a.js-lightbox') : null;
+    if (a) {
+      e.preventDefault();
+      const nestedImg = a.querySelector('img');
+      const alt = nestedImg ? nestedImg.getAttribute('alt') : a.getAttribute('aria-label');
+      open(a.getAttribute('href'), alt, '');
+      return;
+    }
+
+    const triggerImg = e.target && e.target.closest ? e.target.closest('img[data-lightbox-src]') : null;
+    if (triggerImg) {
+      e.preventDefault();
+      open(triggerImg.getAttribute('data-lightbox-src') || triggerImg.getAttribute('src'), triggerImg.getAttribute('alt'), '');
+      return;
+    }
+
+    const closeEl = e.target && e.target.closest ? e.target.closest('[data-lightbox-close]') : null;
+    if (closeEl && modal.classList.contains('is-open')) {
+      e.preventDefault();
+      close();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+  });
+})();
