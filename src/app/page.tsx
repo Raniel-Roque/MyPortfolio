@@ -84,7 +84,7 @@ export default function Home() {
                 I specialize in <strong>full-stack development</strong>, building reliable applications and practical IT solutions. With expertise in <strong>React, Next.js, PHP, Laravel</strong>, and modern web technologies, I create efficient systems that solve real-world challenges. I'm passionate about clean code, user experience, and delivering quality work that supports business goals.
               </p>
               <div className="flex gap-4">
-                <a href="/assets/CV_RESUME.pdf" download className="inline-flex items-center justify-center rounded-full border border-gray-300 dark:border-white/20 bg-white dark:bg-transparent px-8 py-4 text-sm font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/10 transition-all">Download Resume</a>
+                <a href="/assets/Raniel_Roque_Resume_2026.pdf" download className="inline-flex items-center justify-center rounded-full border border-gray-300 dark:border-white/20 bg-white dark:bg-transparent px-8 py-4 text-sm font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-white/10 transition-all">Download Resume</a>
               </div>
             </div>
             <div>
