@@ -1,0 +1,142 @@
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --card: #ffffff;
+  --muted: #4b5563;
+  --muted-2: #6b7280;
+  --border: #e5e7eb;
+  --soft: #f9fafb;
+  --header: rgba(255, 255, 255, 0.8);
+}
+
+html.dark {
+  --bg: #0a0a0a;
+  --text: #fafafa;
+  --card: #171717;
+  --muted: #a1a1aa;
+  --muted-2: #71717a;
+  --border: #262626;
+  --soft: #171717;
+  --header: rgba(10, 10, 10, 0.8);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+nav {
+  background: var(--header);
+  border-color: var(--border);
+}
+
+nav a {
+  color: var(--text);
+}
+
+.bg-white { background-color: var(--card) !important; }
+.bg-gray-50 { background-color: var(--soft) !important; }
+.bg-gray-100 { background-color: var(--soft) !important; }
+.bg-gray-900 { background-color: var(--text) !important; }
+.text-gray-900 { color: var(--text) !important; }
+.text-gray-700, .text-gray-600 { color: var(--muted) !important; }
+.text-gray-500 { color: var(--muted-2) !important; }
+.text-gray-400 { color: var(--muted-2) !important; }
+.border-gray-200, .border-gray-300 { border-color: var(--border) !important; }
+.bg-white\/80 { background-color: var(--header) !important; }
+
+html.dark .bg-gray-900 { background-color: #fafafa !important; }
+html.dark .text-white { color: #0a0a0a !important; }
+html.dark .hover\:bg-gray-800:hover { background-color: #e5e5e5 !important; }
+
+html.dark input, 
+html.dark textarea {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+html.dark input:focus, 
+html.dark textarea:focus {
+  outline: none;
+  border-color: var(--text);
+}
+
+.section-divider {
+  border-top: 1px solid var(--border);
+}
+
+.chip {
+  background: rgba(148, 163, 184, 0.14);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.lightbox-modal {
+   position: fixed;
+   inset: 0;
+   z-index: 1000;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   padding: 24px;
+ }
+
+.lightbox-modal.is-open {
+   display: flex;
+ }
+
+.lightbox-backdrop {
+   position: absolute;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.75);
+ }
+
+.lightbox-content {
+   position: relative;
+   z-index: 1;
+   max-width: min(1100px, 100%);
+   max-height: min(85vh, 100%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+.lightbox-image {
+   max-width: 100%;
+   max-height: 85vh;
+   border-radius: 16px;
+   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+   background: var(--card);
+ }
+
+.lightbox-caption {
+   margin-top: 12px;
+   font-size: 14px;
+   line-height: 1.4;
+   color: rgba(255, 255, 255, 0.9);
+   text-align: center;
+   max-width: 90ch;
+ }
+
+.lightbox-close {
+   position: absolute;
+   top: -12px;
+   right: -12px;
+   width: 40px;
+   height: 40px;
+   border-radius: 9999px;
+   border: 1px solid rgba(255, 255, 255, 0.25);
+   background: rgba(17, 24, 39, 0.85);
+   color: #fff;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+.lightbox-close:hover {
+   background: rgba(17, 24, 39, 1);
+ }
